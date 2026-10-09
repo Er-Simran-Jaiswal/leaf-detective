@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaf Detective</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Leaf Detective</h1>
+  <p id="status">Loading the plant brain…</p>
+</header>
+
+<main>
+  <label class="snap">
+    <input id="photo" type="file" accept="image/*" capture="environment" hidden disabled>
+    <span>Photograph a leaf or bird</span>
+  </label>
+
+  <section id="birds">
+    <h3>Bird call listener</h3>
+    <button id="listen" type="button">Listen for 8 seconds</button>
+    <p id="birdStatus">Stand still, hold the phone up, stay quiet.</p>
+    <div id="birdResult" hidden>
+      <ul id="birdList"></ul>
+      <p id="birdNote"></p>
+    </div>
+  </section>
+
+  <section id="result" hidden>
+    <img id="preview" alt="Your photo">
+    <h2 id="name"></h2>
+    <p id="confidence"></p>
+    <p id="facts">Thinking…</p>
+  </section>
+
+  <section>
+    <h3>Field log</h3>
+    <ul id="log"></ul>
+    <p id="empty">Nothing found yet. Go outside and find something.</p>
+  </section>
+
+  <label class="toggle"><input type="checkbox" id="breakToggle" checked> Look-up break after each find (10 min)</label>
+</main>
+
+<div id="lock" hidden>
+  <p>Put the phone away. Look around you.</p>
+  <strong id="timer">10:00</strong>
+  <button id="skip">Skip break</button>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

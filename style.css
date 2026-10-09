@@ -1,0 +1,35 @@
+:root{
+  --paper:#e3ebdc; --ink:#2a2119; --moss:#3f6b3a; --berry:#a8243b; --line:#b9c7ae;
+}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.55 Georgia,"Times New Roman",serif;background:var(--paper);color:var(--ink);
+  max-width:34rem;margin-inline:auto;padding:1.2rem}
+header h1{font-size:2.4rem;margin:0;letter-spacing:-.02em;color:var(--moss)}
+#status{margin:.2rem 0 1.4rem;font-style:italic}
+.snap{display:block;text-align:center;padding:2.2rem 1rem;border:2px dashed var(--moss);border-radius:.4rem;
+  font-size:1.2rem;cursor:pointer;background:#f0f5eb}
+.snap:has(input:disabled){opacity:.45;cursor:wait}
+.snap:focus-within{outline:3px solid var(--berry);outline-offset:3px}
+#result{margin:1.4rem 0;padding:1rem;background:#f0f5eb;border-left:6px solid var(--berry)}
+#preview{width:100%;max-height:18rem;object-fit:cover;border-radius:.3rem}
+#name{margin:.8rem 0 0;font-size:1.6rem;text-transform:capitalize}
+#confidence{margin:0;color:var(--berry);font-size:.95rem}
+#facts{white-space:pre-wrap}
+h3{border-bottom:1px solid var(--line);padding-bottom:.3rem}
+#log{list-style:none;padding:0;margin:0}
+#log li{display:flex;gap:.8rem;align-items:center;padding:.5rem 0;border-bottom:1px solid var(--line)}
+#log img{width:3rem;height:3rem;object-fit:cover;border-radius:.2rem}
+#log small{display:block;opacity:.7}
+.toggle{display:block;margin-top:1.6rem;font-size:.95rem}
+#lock{position:fixed;inset:0;background:var(--moss);color:#f0f5eb;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:1rem;text-align:center;padding:2rem;font-size:1.5rem}
+#lock[hidden]{display:none}
+#lock strong{font-size:4rem;font-variant-numeric:tabular-nums}
+button{font:inherit;font-size:1rem;padding:.5rem 1rem;border:1px solid currentColor;background:none;color:inherit;border-radius:.3rem;cursor:pointer}
+@media (prefers-reduced-motion:no-preference){#result{animation:in .3s ease-out}@keyframes in{from{opacity:0}}}
+#birds{margin:1.6rem 0}
+#listen{display:block;width:100%;padding:1rem;font-size:1.1rem;background:var(--moss);color:#f0f5eb;border-color:var(--moss)}
+#listen:disabled{opacity:.5;cursor:wait}
+#listen:focus-visible{outline:3px solid var(--berry);outline-offset:3px}
+#birdList{padding-left:1.2rem}
+#birdNote{color:var(--berry);font-size:.95rem}
